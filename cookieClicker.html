@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+<style>
+#farmPrice {
+    border-style: solid;
+    border-color: rgb(158,128,0);
+    border-width: 1px;
+}
+#farmAm {
+    border-style: solid;
+    border-color: rgb(158,128,0);
+    border-width: 1px;
+}
+#treePrice{
+    border-style: solid;
+    border-color: rgb(158,128,0);
+    border-width: 1px;
+}
+#treeAm{
+    border-style: solid;
+    border-color: rgb(158,128,0);
+    border-width: 1px;
+}
+#ovenPrice{
+    border-style: solid;
+    border-color: rgb(158,128,0);
+    border-width: 1px;
+}
+#ovenAm{
+    border-style: solid;
+    border-color: rgb(158,128,0);
+    border-width: 1px;
+}
+#robotPrice{
+    border-style: solid;
+    border-color: rgb(158,128,0);
+    border-width: 1px;
+}
+#robotAm{
+    border-style: solid;
+    border-color: rgb(158,128,0);
+    border-width: 1px;
+}
+#cantSeeMe{
+    visibility: hidden;
+}
+a:link {
+    color: rgb(98,48,0);
+}
+a:visited {
+    color: rgb(208,168,128);
+}
+a:hover {
+    color: rgb(48,28,0);
+}
+a:active {
+    color: black;
+}
+
+</style>
+</head>
+
+
+<body style = "background-color:rgb(158,128,0)">
+
+<h1 style = "text-align:center"> Cookie Clicker! </h1>
+<p             style = "text-align:center;font-size:100%;"> You have </p>
+<p id="amount" style = "text-align:center;font-size:100%;"> 0 </p>
+<p             style = "text-align:center;font-size:100%;"> cookies </p>
+
+<p style = "text-align:center"> <img onClick = "cookiePressed()" src = "images/myCookie.png" alt = "Click me!" style = "width:170px;height:171px;"> </p>
+
+
+<button id = "cantSeeMe" style = "width:150px;height:30px;float:left"> John Cena </button>
+<label  style = "background-color:rgb(158,128,0);width:100px;height:30px;float:left"> Price </label>
+<label  style = "background-color:rgb(158,128,0);width:100px;height:30px;float:left"> Amount </label>
+<br> <br>
+
+<button onClick = "getFarm()" style = "width:150px;height:30px;float:left"> Wheat Farm </button>
+<label id="farmPrice" style = "background-color:white;width:100px;height:30px;float:left"> 10 </label>
+<label id="farmAm"    style = "background-color:white;width:100px;height:30px;float:left"> 0 </label>
+<img id="farm1" src = "images/myFarm.png" alt = "Farm1" style = "width:40px;height:40px;">
+<img id="farm2" src = "images/myFarm.png" alt = "Farm2" style = "width:40px;height:40px;">
+<img id="farm3" src = "images/myFarm.png" alt = "Farm3" style = "width:40px;height:40px;">
+<img id="farm4" src = "images/myFarm.png" alt = "Farm4" style = "width:40px;height:40px;">
+<img id="farm5" src = "images/myFarm.png" alt = "Farm5" style = "width:40px;height:40px;">
+<img id="farm6" src = "images/myFarm.png" alt = "Farm6" style = "width:40px;height:40px;">
+<img id="farm7" src = "images/myFarm.png" alt = "Farm7" style = "width:40px;height:40px;">
+<img id="farm8" src = "images/myFarm.png" alt = "Farm8" style = "width:40px;height:40px;">
+<img id="farm9" src = "images/myFarm.png" alt = "Farm9" style = "width:40px;height:40px;">
+<img id="farm10" src = "images/myFarm.png" alt = "Farm10" style = "width:40px;height:40px;">	
+<br> <br>
+
+
+
+<button onClick = "getTree()" style = "width:150px;height:30px;float:left"> Cocoa Bean Tree</button>
+<label id="treePrice" style = "background-color:white;width:100px;height:30px;float:left"> 300 </label>
+<label id="treeAm"    style = "background-color:white;width:100px;height:30px;float:left"> 0 </label>
+<img id="tree1" src = "images/myTree.png" alt = "Tree1" style = "width:40px;height:40px;">
+<img id="tree2" src = "images/myTree.png" alt = "Tree2" style = "width:40px;height:40px;">
+<img id="tree3" src = "images/myTree.png" alt = "Tree3" style = "width:40px;height:40px;">
+<img id="tree4" src = "images/myTree.png" alt = "Tree4" style = "width:40px;height:40px;">
+<img id="tree5" src = "images/myTree.png" alt = "Tree5" style = "width:40px;height:40px;">
+<img id="tree6" src = "images/myTree.png" alt = "Tree6" style = "width:40px;height:40px;">
+<img id="tree7" src = "images/myTree.png" alt = "Tree7" style = "width:40px;height:40px;">
+<img id="tree8" src = "images/myTree.png" alt = "Tree8" style = "width:40px;height:40px;">
+<img id="tree9" src = "images/myTree.png" alt = "Tree9" style = "width:40px;height:40px;">
+<img id="tree10" src = "images/myTree.png" alt = "Tree10" style = "width:40px;height:40px;">
+<br> <br>
+
+
+
+<button onClick = "getOven()" style = "width:150px;height:30px;float:left"> Industrial Oven </button>
+<label id="ovenPrice" style = "background-color:white;width:100px;height:30px;float:left"> 1000 </label>
+<label id="ovenAm"    style = "background-color:white;width:100px;height:30px;float:left"> 0 </label>
+<img id="oven1" src = "images/myOven.png" alt = "Oven1" style = "width:40px;height:40px;">
+<img id="oven2" src = "images/myOven.png" alt = "Oven2" style = "width:40px;height:40px;">
+<img id="oven3" src = "images/myOven.png" alt = "Oven3" style = "width:40px;height:40px;">
+<img id="oven4" src = "images/myOven.png" alt = "Oven4" style = "width:40px;height:40px;">
+<img id="oven5" src = "images/myOven.png" alt = "Oven5" style = "width:40px;height:40px;">
+<img id="oven6" src = "images/myOven.png" alt = "Oven6" style = "width:40px;height:40px;">
+<img id="oven7" src = "images/myOven.png" alt = "Oven7" style = "width:40px;height:40px;">
+<img id="oven8" src = "images/myOven.png" alt = "Oven8" style = "width:40px;height:40px;">
+<img id="oven9" src = "images/myOven.png" alt = "Oven9" style = "width:40px;height:40px;">
+<img id="oven10" src = "images/myOven.png" alt = "Oven10" style = "width:40px;height:40px;">
+<br> <br>
+
+
+
+<button onClick = "getRobot()" style = "width:150px;height:30px;float:left"> Robot </button>
+<label id="robotPrice" style = "background-color:white;width:100px;height:30px;float:left"> 5000 </label>
+<label id="robotAm"    style = "background-color:white;width:100px;height:30px;float:left;border:1px;"> 0 </label>
+<img id="robot1" src = "images/myRobot.png" alt = "Robot1" style = "width:40px;height:40px;">
+<img id="robot2" src = "images/myRobot.png" alt = "Robot2" style = "width:40px;height:40px;">
+<img id="robot3" src = "images/myRobot.png" alt = "Robot3" style = "width:40px;height:40px;">
+<img id="robot4" src = "images/myRobot.png" alt = "Robot4" style = "width:40px;height:40px;">
+<img id="robot5" src = "images/myRobot.png" alt = "Robot5" style = "width:40px;height:40px;">
+<img id="robot6" src = "images/myRobot.png" alt = "Robot6" style = "width:40px;height:40px;">
+<img id="robot7" src = "images/myRobot.png" alt = "Robot7" style = "width:40px;height:40px;">
+<img id="robot8" src = "images/myRobot.png" alt = "Robot8" style = "width:40px;height:40px;">
+<img id="robot9" src = "images/myRobot.png" alt = "Robot9" style = "width:40px;height:40px;">
+<img id="robot10" src = "images/myRobot.png" alt = "Robot10" style = "width:40px;height:40px;">
+<br> <br>
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+<!-- brrrrrr... chilly -->
+
+<p style = "text-align:right"> Created by James Enouen, based upon the original: <a href = "http://orteil.dashnet.org/cookieclicker/" style = "link.color = black"l> Cookie Clicker</a> . </p>
+
+<script language="JavaScript" type="text/javascript">
+var cookies = 0;
+var COOKIE_AMOUNT = 1;
+var farms = 0, trees = 0, ovens = 0, robots= 0;
+function cookiePressed() {
+	cookies += COOKIE_AMOUNT;
+	document.getElementById("amount").innerHTML = cookies;
+	return;
+}
+
+function getFarm() {
+	if (cookies < findPrice(10,farms)) {
+		return;
+	} else {
+		cookies -= findPrice(10,farms);
+		farms++;
+		COOKIE_AMOUNT += 1;
+		document.getElementById("amount").innerHTML = cookies;
+		document.getElementById("farmAm").innerHTML = farms;
+		document.getElementById("farmPrice").innerHTML = findPrice(10,farms);
+		if (farms < 11) {
+		for (var f = 0; f < farms; f++) {
+			document.getElementById("farm"+(f+1)).style.display = "inline";
+		}
+		}
+	}
+}
+function getTree() {
+	if (cookies < findPrice(300,trees)) {
+		return;
+	} else {
+		cookies -= findPrice(300,trees);
+		trees++;
+		COOKIE_AMOUNT += 10;
+		document.getElementById("amount").innerHTML = cookies;
+		document.getElementById("treeAm").innerHTML = trees;
+		document.getElementById("treePrice").innerHTML = findPrice(300,trees);
+		if (trees < 11) {
+		for (var t = 0; t < trees; t++) {
+			document.getElementById("tree"+(t+1)).style.display = "inline";
+		}
+		}
+	}	
+}
+function getOven() {
+	if (cookies < findPrice(1000,ovens)) {
+		return;
+	} else {
+		cookies -= findPrice(1000,ovens);
+		ovens++;
+		COOKIE_AMOUNT += 100;
+		document.getElementById("amount").innerHTML = cookies;
+		document.getElementById("ovenAm").innerHTML = ovens;
+		document.getElementById("ovenPrice").innerHTML = findPrice(1000,ovens);
+		if (ovens < 11) {
+		for (var o = 0; o < ovens; o++) {
+			document.getElementById("oven"+(o+1)).style.display = "inline";
+		}
+		}
+	}	
+}
+function getRobot() {
+	if (cookies < findPrice(5000,robots)) {
+		return;
+	} else {
+		cookies -= findPrice(5000,robots);
+		robots++;
+		COOKIE_AMOUNT += 1000;
+		document.getElementById("amount").innerHTML = cookies;
+		document.getElementById("robotAm").innerHTML = robots;
+		document.getElementById("robotPrice").innerHTML = findPrice(5000,robots);
+		if (robots < 11) {
+		for (var r = 0; r < robots; r++) {
+			document.getElementById("robot"+(r+1)).style.display = "inline";
+		}
+		}
+	}	
+}
+
+function findPrice(basePrice, amo) {
+	var price = basePrice;
+	for (var i = 0; i < amo; i++) {
+		price = price * 2;
+	}
+	return price;
+}
+
+for (var f = 0; f < 10; f++) {
+    document.getElementById("farm"+(f+1)).style.display = "none";
+}
+for (var t = 0; t < 10; t++) {
+    document.getElementById("tree"+(t+1)).style.display = "none";
+}
+for (var o = 0; o < 10; o++) {
+    document.getElementById("oven"+(o+1)).style.display = "none";
+}
+for (var r = 0; r < 10; r++) {
+    document.getElementById("robot"+(r+1)).style.display = "none";
+}
+
+		
+</script>
+
+</body>
+</html>
